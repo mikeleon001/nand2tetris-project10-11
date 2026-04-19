@@ -2,13 +2,16 @@
 
 A two-stage compiler for the Jack programming language, built as part of the Nand2Tetris course (The Elements of Computing Systems).
 
-## Project 10 - Syntax Analyzer
+## Repository Structure
+
+### Project10/ - Syntax Analyzer
 Parses Jack source code and outputs a structured XML parse tree.
+- `JackAnalyzer.java` - Top-level driver, handles file/directory input
+- `JackTokenizer.java` - Lexical analyzer, tokenizes Jack source code
+- `CompilationEngine.java` - Recursive descent parser, outputs XML
 
-## Project 11 - Code Generator
+### Project11/ - Code Generator
 Compiles Jack source code into Hack VM code.
-
-## Files
 - `JackAnalyzer.java` - Top-level driver, handles file/directory input
 - `JackTokenizer.java` - Lexical analyzer, tokenizes Jack source code
 - `CompilationEngine.java` - Recursive descent compiler, emits VM code
@@ -25,8 +28,12 @@ javac *.java
 java JackAnalyzer <file.jack | directory>
 ```
 
-## Test Programs
-All 6 Nand2Tetris Project 11 test programs pass:
+## Test Results
+### Project 10
+All 7 parse tree comparisons passed using the Nand2Tetris TextComparer utility across all three test programs (ArrayTest, ExpressionLessSquare, Square).
+
+### Project 11
+All 6 test programs compile and run correctly:
 - Seven
 - Average
 - ConvertToBin
